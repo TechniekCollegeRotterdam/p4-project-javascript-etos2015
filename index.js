@@ -1,11 +1,11 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-
+Goed gebruik gemaakt van comments!
 canvas.width = 1024
 canvas.height = 576
-
+Je code ziet er netjes uit.
 c.fillRect(0, 0, canvas.width, canvas.height)
-
+veder kan er niks beter.
 const gravity = 0.6
 //sprite geeft aan welke kleur positie snelheid aan gravity zorgt ervoor dat er geen gat op de bodem onstaat en velocity geeft de snelheid van bewegingen aan
 
