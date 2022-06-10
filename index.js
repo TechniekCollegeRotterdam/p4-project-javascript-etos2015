@@ -16,7 +16,7 @@ class Sprite {
         this.height = 150
         this.lastKey
     }
-
+//wat is draw?
     draw() {
         c.fillStyle = 'red'
         c.fillRect(this.position.x, this.position.y, 50, this.height)
@@ -159,3 +159,5 @@ window.addEventListener('keyup', (event) => {
     }
     console.log(event.key)
 })
+
+//voor de rest gewoon goed
