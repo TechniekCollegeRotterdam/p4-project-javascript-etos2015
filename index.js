@@ -13,7 +13,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/background.png'
+  imageSrc: './img/background2.png'
 })
 
 const shop = new Sprite({
@@ -21,7 +21,7 @@ const shop = new Sprite({
     x: 600,
     y: 128
   },
-  imageSrc: './img/shop.png',
+  imageSrc: '',
   scale: 2.75,
   framesMax: 6
 })
@@ -164,6 +164,7 @@ const keys = {
   }
 }
 
+// dit is zodat de timer op het scherm komt
 decreaseTimer()
 
 function animate() {
@@ -177,6 +178,7 @@ function animate() {
   player.update()
   enemy.update()
 
+  //basis snelheid op 0 zodat ze niet door blijven lopen
   player.velocity.x = 0
   enemy.velocity.x = 0
 
@@ -239,7 +241,7 @@ function animate() {
     player.isAttacking = false
   }
 
-  // this is where our player gets hit
+  // dit is als de player is geraakt
   if (
     rectangularCollision({
       rectangle1: enemy,
@@ -263,7 +265,11 @@ function animate() {
 
   // end game based on health
   if (enemy.health <= 0 || player.health <= 0) {
-    determineWinner({ player, enemy, timerId })
+    determineWinner({
+      player,
+      enemy,
+      timerId
+    })
   }
 }
 

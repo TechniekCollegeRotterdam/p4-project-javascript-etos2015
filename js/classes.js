@@ -4,7 +4,10 @@ class Sprite {
     imageSrc,
     scale = 1,
     framesMax = 1,
-    offset = { x: 0, y: 0 }
+    offset = {
+      x: 0,
+      y: 0
+    }
   }) {
     this.position = position
     this.width = 50
@@ -59,9 +62,16 @@ class Fighter extends Sprite {
     imageSrc,
     scale = 1,
     framesMax = 1,
-    offset = { x: 0, y: 0 },
+    offset = {
+      x: 0,
+      y: 0
+    },
     sprites,
-    attackBox = { offset: {}, width: undefined, height: undefined }
+    attackBox = {
+      offset: {},
+      width: undefined,
+      height: undefined
+    }
   }) {
     super({
       position,
@@ -126,7 +136,7 @@ class Fighter extends Sprite {
   }
 
   attack() {
-    this.switchSprite('attack1')
+    this.switchSprite('attack2')
     this.isAttacking = true
   }
 
